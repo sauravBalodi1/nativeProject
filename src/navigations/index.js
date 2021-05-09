@@ -1,5 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
+import { useContext } from 'react';
 import {
     SafeAreaView,
     ScrollView,
@@ -8,12 +9,16 @@ import {
     Text,
     useColorScheme,
     View,
-  } from 'react-native';import AuthNavigator from './AuthNavigator';
+  } from 'react-native';import { GlobalContext } from '../context/reducers/Provider';
+import AuthNavigator from './AuthNavigator';
 import DrawerNavigator from './DrawerNavigator';
 import HomeNavigator from './HomeNavigator';
 ``
 const  AppNavContainer = () => {
-    const isLoggedIn=true;
+    
+    const {authentication:{isLoggedIn}} = useContext(GlobalContext)
+    //console.log("state",state.authentication.isLoggedIn)
+console.log(isLoggedIn)
     return (
         <NavigationContainer>
     

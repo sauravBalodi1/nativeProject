@@ -12,7 +12,7 @@ const AuthNavigator = () => {
     const HomeStack=createStackNavigator();
     return <HomeStack.Navigator>
     <HomeStack.Screen name={LOGIN} component={login}></HomeStack.Screen>
-    <HomeStack.Screen name={REGISTER} component={signup}></HomeStack.Screen>
+ <HomeStack.Screen name={REGISTER} component={signup}></HomeStack.Screen>
 
     </HomeStack.Navigator>
 }
